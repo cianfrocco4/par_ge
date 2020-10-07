@@ -1,0 +1,30 @@
+main()
+{
+   t = number of threads
+   
+   for i in t
+      launch thread
+
+   read in input file
+      add task to queue
+      wake up thread (if any) to execute task
+      if "d"
+          sleep( time )
+
+   wait for threads to finish tasks and empty queue
+   clean up memory
+   print result
+   exit
+}
+
+worker()
+{
+   wait for signal from master
+   pull task from task queue by calling update()
+   if task queue is empty, block() until awakened
+}
+
+update(int time)
+{
+   sleep for the time given
+}
